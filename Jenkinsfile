@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Parallel Execution') {
             steps {
-                parallel{
+                parallel
                     a: {
                         bat "mvn clean"
                     },
@@ -13,7 +13,6 @@ pipeline {
                     c: {
                         bat "mvn package"
                     }
-                }
             }
         }
         stage('Consolidate Results') {
